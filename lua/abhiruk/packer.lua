@@ -13,12 +13,24 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-      vim.cmd('colorscheme rose-pine')
-    end
-  })
+   'rose-pine/neovim',
+   as = 'rose-pine',
+   config = function()
+     vim.cmd('colorscheme rose-pine')
+   end
+ })
+ ---
+ --use({
+ -- 'nobbmaestro/nvim-andromeda',
+ -- as = 'andromeda',
+ -- requires = { 'tjdevries/colorbuddy.nvim', branch = "dev" },
+  --config = function ()
+    --vim.cmd('colorscheme andromeda')
+  --end
+--})
+---
+
+
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use ({
     'williamboman/mason.nvim',
@@ -49,4 +61,15 @@ return require('packer').startup(function(use)
     }
   }
 
+use ({
+   "nvim-neo-tree/neo-tree.nvim",
+   branch = "v3.x",
+   requires = {
+     "nvim-lua/plenary.nvim",
+     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+     "MunifTanjim/nui.nvim",
+     "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+   }
+
+  })
  end)
