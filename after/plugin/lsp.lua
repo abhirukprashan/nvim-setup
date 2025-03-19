@@ -32,11 +32,12 @@ end )
       documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-o>'] = cmp.mapping.complete(),
       ['<C-f>'] = cmp_action.luasnip_jump_forward(),
       ['<C-b>'] = cmp_action.luasnip_jump_backward(),
       ['<C-u>'] = cmp.mapping.scroll_docs(-4),
       ['<C-d>'] = cmp.mapping.scroll_docs(4),
+      ['<C-L>'] = cmp.mapping.confirm({ select = true }),
     }),
     snippet = {
       expand = function(args)
@@ -44,4 +45,3 @@ end )
       end,
     },
   })
-
