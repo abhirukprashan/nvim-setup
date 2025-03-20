@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
      vim.cmd('colorscheme rose-pine')
    end
  })
+  use 'mbbill/undotree'
  ---
  --use({
  -- 'nobbmaestro/nvim-andromeda',
@@ -28,9 +29,13 @@ return require('packer').startup(function(use)
     --vim.cmd('colorscheme andromeda')
   --end
 --})
----
 
-
+--
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
+  use 'lewis6991/gitsigns.nvim'
+  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-autopairs'
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use ({
     'williamboman/mason.nvim',
@@ -38,7 +43,7 @@ return require('packer').startup(function(use)
       require("mason").setup()
     end
   })
-
+  use('onsails/lspkind-nvim')
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
