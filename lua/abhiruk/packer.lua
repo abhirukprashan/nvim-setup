@@ -13,10 +13,10 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use({
-   'rose-pine/neovim',
-   as = 'rose-pine',
+   'cpea2506/one_monokai.nvim',
+   as = 'one_monokai',
    config = function()
-     vim.cmd('colorscheme rose-pine')
+     vim.cmd('colorscheme one_monokai')
    end
  })
   use 'mbbill/undotree'
