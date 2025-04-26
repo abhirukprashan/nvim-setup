@@ -14,5 +14,5 @@ vim.cmd("colorscheme one_monokai")
 -- vim.cmd("colorscheme rose-pine-moon")
 -- vim.cmd("colorscheme rose-pine-dawn")
 --
-
+require("telescope").load_extension('harpoon')
 print("hello from abhiruk")
