@@ -19,6 +19,16 @@ return require('packer').startup(function(use)
      vim.cmd('colorscheme one_monokai')
    end
  })
+  use({
+    'MeanderingProgrammer/render-markdown.nvim',
+    after = { 'nvim-treesitter' },
+    requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+    -- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
+    -- requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+    config = function()
+        require('render-markdown').setup({})
+    end
+})
   use 'mbbill/undotree'
  ---
  --use({
@@ -76,7 +86,7 @@ use ({
      "nvim-lua/plenary.nvim",
      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
      "MunifTanjim/nui.nvim",
-     "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+     -- Optional image support in preview window: See `# Preview Mode` for more information
    }
 
   })
