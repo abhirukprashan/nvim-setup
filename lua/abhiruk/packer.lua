@@ -12,14 +12,8 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use({
-   'cpea2506/one_monokai.nvim',
-   as = 'one_monokai',
-   config = function()
-     vim.cmd('colorscheme one_monokai')
-   end
- })
-  use({
+  use({ "catppuccin/nvim", as = "catppuccin" })
+     use({
     'MeanderingProgrammer/render-markdown.nvim',
     after = { 'nvim-treesitter' },
     requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
