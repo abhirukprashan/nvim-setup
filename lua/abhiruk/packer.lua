@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
         require('render-markdown').setup({})
     end
 })
+  use 'github/copilot.vim'
   use 'mbbill/undotree'
  ---
  --use({
